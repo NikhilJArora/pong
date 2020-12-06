@@ -2,10 +2,9 @@
 
 Simple cross platform implementation of Pong in Java, one of my favorite retro games.
 
+![](pongGIF.gif)
 
 ## Building and running
-
-The source is organized as a Gradle project. You can build it from an IDE or from the command line.
 
 Assuming [Git](https://help.github.com/articles/set-up-git) and
 [JDK 7 or newer](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
