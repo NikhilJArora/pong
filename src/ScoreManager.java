@@ -11,7 +11,8 @@ public class ScoreManager {
     }
 
     public void draw(Graphics g){
-        g.drawString(String.format("%d -- %d", lScore,rScore), (int)panel_size.getWidth()/2,(int)panel_size.getHeight()/40);
+        g.drawString(String.format("%d", lScore), (int)panel_size.getWidth()/4,(int)panel_size.getHeight()/40);
+        g.drawString(String.format("%d", rScore), 3*(int)panel_size.getWidth()/4,(int)panel_size.getHeight()/40);
     }
 
     public void lScored(){

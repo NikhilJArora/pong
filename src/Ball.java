@@ -9,7 +9,7 @@ public class Ball {
     // for coll detection purposes Im considering the ball to a square lol
     private int xDim;
     private int yDim;
-    private static int frameVel = 2;
+    private static int frameVel = 4;
     private int xVel;
 
     private int yVel;
@@ -56,7 +56,7 @@ public class Ball {
         yPos = ((int)panel_size.getHeight()/2) - (xDim/2);
 
         xVel = frameVel * (new Random().nextBoolean() ? -1 : 1);
-        yVel = frameVel/2 * (new Random().nextBoolean() ? -1 : 1);
+        yVel = frameVel * (new Random().nextBoolean() ? -1 : 1);
 
     }
 

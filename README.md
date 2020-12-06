@@ -1,2 +1,22 @@
-# pong
-Having some fun hacking together my own version on pong using Python and Pygame.
+# Pong
+
+Simple cross platform implementation of Pong in Java, one of my favorite retro games.
+
+
+## Building and running
+
+The source is organized as a Gradle project. You can build it from an IDE or from the command line.
+
+Assuming [Git](https://help.github.com/articles/set-up-git) and
+[JDK 7 or newer](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+is installed, open a terminal and enter:
+```
+git clone https://github.com/NikhilJArora/pong.git
+cd pong/src
+
+# compile the game
+javac GameFrame.java
+
+# run the game
+java GameFrame
+```
