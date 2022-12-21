@@ -1,6 +1,6 @@
 # Pong
 
-Simple cross platform implementation of Pong in Java, one of my favorite retro games.
+Simple cross-platform implementation of Pong using pure Java.
 
 ![](pongGIF.gif)
 
@@ -11,11 +11,11 @@ Assuming [Git](https://help.github.com/articles/set-up-git) and
 is installed, open a terminal and enter:
 ```
 git clone https://github.com/NikhilJArora/pong.git
-cd pong/src
+cd pong 
 
 # compile the game
-javac GameFrame.java
+javac src/com.nikhiljarora/pong/Pong.java -d out/
 
 # run the game
-java GameFrame
+java src/com.nikhiljarora/pong/Pong
 ```
