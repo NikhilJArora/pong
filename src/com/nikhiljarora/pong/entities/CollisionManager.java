@@ -1,12 +1,10 @@
 package com.nikhiljarora.pong.entities;
 
-import java.awt.*;
-
 public class CollisionManager {
     private final int gamePixelWidth, gamePixelHeight;
-    private Ball ball;
-    private Paddle lPaddle;
-    private Paddle rPaddle;
+    private final Ball ball;
+    private final Paddle lPaddle;
+    private final Paddle rPaddle;
 
     public CollisionManager(int gamePixelWidth, int gamePixelHeight, Ball ball, Paddle lPaddle, Paddle rPaddle) {
         this.gamePixelWidth = gamePixelWidth;
@@ -15,7 +13,8 @@ public class CollisionManager {
         this.lPaddle = lPaddle;
         this.rPaddle = rPaddle;
     }
-    public CollisionType checkCollisions(){
+
+    public CollisionType checkCollisions() {
         // check coll with lPaddle
         if (lPaddle.getxPos() + lPaddle.getxDim() >= ball.getxPos() &&
                 (ball.getyPos() < lPaddle.getyPos() + lPaddle.getyDim() &&
@@ -34,12 +33,12 @@ public class CollisionManager {
         }
 
         // check coll with left wall
-        else if (ball.getxPos() <= 0){
+        else if (ball.getxPos() <= 0) {
             return CollisionType.LWALL;
         }
 
         // check coll with right wall
-        else if (ball.getxPos() + ball.getxDim() >= gamePixelWidth){
+        else if (ball.getxPos() + ball.getxDim() >= gamePixelWidth) {
             return CollisionType.RWALL;
         } else {
             return CollisionType.NOCOLLISION;

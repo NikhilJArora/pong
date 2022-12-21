@@ -9,18 +9,17 @@ import com.nikhiljarora.pong.graphics.SpriteSheet;
 import com.nikhiljarora.pong.input.Keyboard;
 
 import java.awt.*;
-import java.awt.event.KeyEvent;
 
 public class PongManager {
     private final int pixelWidth;
     private final int pixelHeight;
-    private Paddle lPaddle, rPaddle;
-    private Ball ball;
-    private Sprite ballSprite;
-    private CollisionManager collisionManager;
-
     private final Keyboard keyboard;
-    private ScoreManager scoreManager;
+    private final Paddle lPaddle;
+    private final Paddle rPaddle;
+    private final Ball ball;
+    private final Sprite ballSprite;
+    private final CollisionManager collisionManager;
+    private final ScoreManager scoreManager;
 
     public PongManager(int pixelWidth, int pixelHeight, Keyboard keyboard) {
         this.pixelWidth = pixelWidth;
@@ -59,10 +58,10 @@ public class PongManager {
         scoreManager.draw(g);
     }
 
-    public void update(){
+    public void update() {
         CollisionType collType = collisionManager.checkCollisions();
 
-        switch (collType){
+        switch (collType) {
             case NOCOLLISION:
                 ball.update();
                 break;
@@ -88,8 +87,9 @@ public class PongManager {
 
         handleKeyEvents();
     }
-//
-    public void handleKeyEvents(){
+
+    //
+    public void handleKeyEvents() {
         if (keyboard.lUp) {
             lPaddle.moveUp();
         }

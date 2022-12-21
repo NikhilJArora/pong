@@ -14,16 +14,16 @@ public class ScoreManager {
         this.gamePixelHeight = gamePixelHeight;
     }
 
-    public void draw(Graphics g){
-        g.drawString(String.format("%d", lScore), gamePixelWidth/4,gamePixelHeight/40);
-        g.drawString(String.format("%d", rScore), 3*gamePixelWidth/4,gamePixelWidth/40);
+    public void draw(Graphics g) {
+        g.drawString(String.format("%d", lScore), gamePixelWidth / 4, gamePixelHeight / 40);
+        g.drawString(String.format("%d", rScore), 3 * gamePixelWidth / 4, gamePixelWidth / 40);
     }
 
-    public void lScored(){
-        lScore ++;
+    public void lScored() {
+        lScore++;
     }
 
-    public void rScored(){
-        rScore ++;
+    public void rScored() {
+        rScore++;
     }
 }

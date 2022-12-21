@@ -17,17 +17,14 @@ public class GameDisplay extends Canvas implements Runnable {
     public static int scale = 1;
 
     public static int tickRate = 64;
-
-    private Thread thread;
-    public JFrame frame;
-    private boolean running = false;
-
     private final BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
     private final int[] pixels = ((DataBufferInt) image.getRaster().getDataBuffer()).getData();
-
     private final PongManager pongManager;
-
     private final Keyboard keyboard;
+    public JFrame frame;
+    private Thread thread;
+    private boolean running = false;
+
     public GameDisplay() {
         Dimension panelSize = new Dimension(width * scale, height * scale);
         setPreferredSize(panelSize);
@@ -64,10 +61,10 @@ public class GameDisplay extends Canvas implements Runnable {
         int tickCounter = 0;
         int renderCounter = 0;
 
-        final long tickTime = 1_000_000_000/tickRate;
+        final long tickTime = 1_000_000_000 / tickRate;
         while (running) {
             now = System.nanoTime();
-            delta = now-lastTick;
+            delta = now - lastTick;
             if (delta >= (tickTime)) {
                 tick();
                 lastTick = now;
@@ -94,6 +91,7 @@ public class GameDisplay extends Canvas implements Runnable {
     private void clearPixels() {
         Arrays.fill(pixels, 0);
     }
+
     private void render() {
         BufferStrategy bs = getBufferStrategy();
         if (bs == null) {

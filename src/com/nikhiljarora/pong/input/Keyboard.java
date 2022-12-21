@@ -2,12 +2,11 @@ package com.nikhiljarora.pong.input;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.util.Arrays;
 
 public class Keyboard implements KeyListener {
 
-    private boolean[] keys = new boolean[120];
     public boolean lUp, lDown, rUp, rDown;
+    private final boolean[] keys = new boolean[120];
 
     public void update() {
         lUp = keys[KeyEvent.VK_W];
@@ -15,8 +14,10 @@ public class Keyboard implements KeyListener {
         lDown = keys[KeyEvent.VK_S];
         rDown = keys[KeyEvent.VK_DOWN];
     }
+
     @Override
-    public void keyTyped(KeyEvent keyEvent) {}
+    public void keyTyped(KeyEvent keyEvent) {
+    }
 
     @Override
     public void keyPressed(KeyEvent keyEvent) {
